@@ -11,7 +11,7 @@ import org.json.JSONObject;
  */
 public class ConsultaGemini {
      private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
-    private static final String API_KEY = "AIzaSyDUF4xCZJroVCefx5QJR7nk7VRLNzph_Bk"; // Reemplaza con tu clave de API de Gemini
+    private static final String API_KEY = "AIzaSyDfJaqaOyhki6nGdrldo-ZKxea6T-E1m-Q"; // Reemplaza con tu clave de API de Gemini
 
     public String generarConsultaSQL(String consultaNatural, String esquemaBD) throws Exception {
         OkHttpClient client = new OkHttpClient();

@@ -31,7 +31,7 @@ public class ConsultaDinamicaControlador {
             // Validar conexión a Internet
             java.net.URL url = new java.net.URL("https://www.google.com");
             java.net.URLConnection connection = url.openConnection();
-            connection.setConnectTimeout(1000); // 1 segundo de tiempo de espera
+            connection.setConnectTimeout(5000); // 1 segundo de tiempo de espera
             connection.connect();
         } catch (java.io.IOException e) {
             JOptionPane.showMessageDialog(null, "No se puede realizar la consulta: No hay conexión a Internet.", "Error", JOptionPane.ERROR_MESSAGE);
