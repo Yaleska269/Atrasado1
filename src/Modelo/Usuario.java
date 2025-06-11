@@ -6,7 +6,7 @@ package Modelo;
 
 /**
  *
- * @author COMPHP
+ * @author YALESKA
  */
 public class Usuario {
 

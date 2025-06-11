@@ -14,7 +14,7 @@ import java.io.IOException;
 
 /**
  *
- * @author COMPHP
+ * @author  YALESKA
  */
 public class ConsultaDinamicaControlador {
 

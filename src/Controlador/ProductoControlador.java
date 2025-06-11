@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author COMPHP
+ * @author  YALESKA
  */
 public class ProductoControlador {
 

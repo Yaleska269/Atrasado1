@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author COMPHP
+ * @author  YALESKA
  */
 public class UsuarioControlador {
 
@@ -21,7 +21,7 @@ public class UsuarioControlador {
     public UsuarioControlador() {
         this.usuarioDAO = new UsuarioDAO();
     }
-
+ 
     // Método para crear un nuevo usuario
     public void crearUsuario(String usuario, String contrasena) {
         try {
@@ -35,6 +35,10 @@ public class UsuarioControlador {
         }
     }
 
+    
+    
+    
+    
     // Método para obtener todos los usuarios
     public List<Usuario> obtenerTodosUsuarios() {
         try {
@@ -68,6 +72,24 @@ public class UsuarioControlador {
             JOptionPane.showMessageDialog(null, "Error al eliminar el usuario: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+   public Usuario validarCredenciales(String usuario, String contrasena) {
+    try {
+        Usuario user = usuarioDAO.validarUsuario(usuario, contrasena);
+        if (user != null) {
+            System.out.println("Inicio de sesión exitoso.");
+            return user;
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
+            return null;
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error al validar: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        return null;
+    }
+}
+
+
 
     // Método main para pruebas
     public static void main(String[] args) {
